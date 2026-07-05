@@ -73,17 +73,29 @@ body {
 	transform: scale(0.92);
 }
 
-/* ── Mobile bottom (tap hint + dots) ── */
+/* ── Mobile bottom (bar + dots) ── */
 .mobile-bottom {
 	position: fixed;
 	bottom: 1.25rem;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	z-index: 50;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 0.75rem;
+	width: 100%;
+	max-width: 32rem;
+}
+
+.mobile-bottom-bar {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0 0.5rem;
 }
 
 .tap-hint {
@@ -91,6 +103,154 @@ body {
 	color: #9ca3af;
 	letter-spacing: 0.04em;
 	margin: 0;
+}
+
+.redirect-bottom-btn {
+	position: absolute;
+	left: 0.5rem;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.85);
+	border: 1px solid #e5e7eb;
+	color: #9ca3af;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	touch-action: manipulation;
+}
+
+.redirect-bottom-btn:hover {
+	background: rgba(255, 255, 255, 0.95);
+	color: #374151;
+}
+
+.redirect-bottom-btn:active {
+	transform: scale(0.92);
+}
+
+.menu-btn {
+	position: absolute;
+	right: 0.5rem;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	background: rgba(255, 255, 255, 0.85);
+	border: 1px solid #e5e7eb;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	padding: 0;
+	touch-action: manipulation;
+}
+
+.menu-btn span {
+	display: block;
+	width: 16px;
+	height: 2px;
+	background: #9ca3af;
+	border-radius: 1px;
+	transition: background 0.2s;
+}
+
+.menu-btn:hover span {
+	background: #374151;
+}
+
+.menu-btn:hover {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+.menu-btn:active {
+	transform: scale(0.92);
+}
+
+/* ── Menu overlay ── */
+.menu-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.25);
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fade-in 0.2s ease;
+}
+
+.menu-content {
+	background: white;
+	border-radius: 16px;
+	padding: 1.25rem;
+	width: 90%;
+	max-width: 320px;
+	max-height: 70vh;
+	overflow-y: auto;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.menu-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0.75rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid #f3f4f6;
+}
+
+.menu-header h2 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0;
+	color: #111827;
+}
+
+.menu-close {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: none;
+	font-size: 1rem;
+	color: #9ca3af;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.menu-close:hover {
+	background: #f3f4f6;
+	color: #374151;
+}
+
+.menu-item {
+	display: block;
+	width: 100%;
+	padding: 0.7rem 0.75rem;
+	text-align: left;
+	background: none;
+	border: none;
+	font-size: 0.95rem;
+	font-family: inherit;
+	color: #374151;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: background 0.15s;
+}
+
+.menu-item:hover {
+	background: #f3f4f6;
+}
+
+.menu-item + .menu-item {
+	margin-top: 2px;
 }
 
 /* ── Animations ── */
@@ -415,7 +575,6 @@ pre code {
 	display: flex;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
-	-webkit-overflow-scrolling: touch;
 	height: 100dvh;
 	scroll-behavior: smooth;
 }
@@ -444,16 +603,12 @@ pre code {
 
 
 
-/* Page dots */
+/* ── Page dots ── */
 .mobile-dots {
-	position: fixed;
-	bottom: 1.25rem;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 50;
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
+	justify-content: center;
 }
 
 .mobile-dot {

@@ -66,11 +66,96 @@
 			redirectUrl: 'https://lists.iiit.ac.in',
 			gradient: 'from-teal-50 via-emerald-50/50 to-green-50',
 			viewName: 'card-mailinglists'
+		},
+		{
+			slug: 'ims',
+			title: 'IMS Portal',
+			redirectUrl: 'https://ims.iiit.ac.in',
+			gradient: 'from-slate-50 via-gray-50/50 to-zinc-50',
+			viewName: 'card-ims'
+		},
+		{
+			slug: 'moodle',
+			title: 'Moodle',
+			redirectUrl: 'https://courses.iiit.ac.in',
+			gradient: 'from-purple-50 via-fuchsia-50/50 to-pink-50',
+			viewName: 'card-moodle'
+		},
+		{
+			slug: 'intranet',
+			title: 'Intranet',
+			redirectUrl: 'https://intranet.iiit.ac.in',
+			gradient: 'from-lime-50 via-green-50/50 to-emerald-50',
+			viewName: 'card-intranet'
+		},
+		{
+			slug: 'mess',
+			title: 'Mess',
+			redirectUrl: 'https://mess.iiit.ac.in',
+			gradient: 'from-orange-50 via-amber-50/50 to-yellow-50',
+			viewName: 'card-mess'
+		},
+		{
+			slug: 'app',
+			title: 'My IIIT App',
+			redirectUrl: 'https://play.google.com/store/apps/details?id=com.iiith.ims_app',
+			gradient: 'from-cyan-50 via-sky-50/50 to-blue-50',
+			viewName: 'card-app'
+		},
+		{
+			slug: 'help',
+			title: 'Help Desk',
+			redirectUrl: 'https://help.iiit.ac.in',
+			gradient: 'from-rose-50 via-red-50/50 to-orange-50',
+			viewName: 'card-help'
+		},
+		{
+			slug: 'library',
+			title: 'Library',
+			redirectUrl: 'https://library.iiit.ac.in',
+			gradient: 'from-blue-50 via-indigo-50/50 to-violet-50',
+			viewName: 'card-library'
+		},
+		{
+			slug: 'selfhelp',
+			title: 'Self-Help',
+			redirectUrl: 'https://self-help.iiit.ac.in',
+			gradient: 'from-pink-50 via-fuchsia-50/50 to-violet-50',
+			viewName: 'card-selfhelp'
+		},
+		{
+			slug: 'clubs',
+			title: 'Clubs',
+			redirectUrl: 'https://clubs.iiit.ac.in',
+			gradient: 'from-red-50 via-orange-50/50 to-amber-50',
+			viewName: 'card-clubs'
+		},
+		{
+			slug: 'couriers',
+			title: 'Couriers',
+			redirectUrl: 'https://couriers.iiit.ac.in',
+			gradient: 'from-lime-50 via-yellow-50/50 to-amber-50',
+			viewName: 'card-couriers'
+		},
+		{
+			slug: 'portals',
+			title: 'Portals',
+			redirectUrl: 'https://portals.iiit.ac.in',
+			gradient: 'from-violet-50 via-blue-50/50 to-sky-50',
+			viewName: 'card-portals'
+		},
+		{
+			slug: 'about',
+			title: 'About',
+			redirectUrl: '',
+			gradient: 'from-gray-50 via-neutral-50/50 to-stone-50',
+			viewName: 'card-about'
 		}
 	];
 
 	// ── Shared state ──
 	let activeIndex = $state(0);
+	let menuOpen = $state(false);
 
 	// ── Container ref ──
 	let scrollContainer = $state<HTMLDivElement>();
@@ -154,19 +239,6 @@
 			role="button"
 			tabindex="0"
 		>
-			{#if card.redirectUrl}
-				<button
-					class="redirect-btn"
-					onclick={(e) => {
-						e.stopPropagation();
-						openExternal(card.redirectUrl!);
-					}}
-					aria-label="Open external link"
-				>
-					<ArrowUpRight size={20} />
-				</button>
-			{/if}
-
 			<div class="card-content">
 				<h1 class="card-title">{card.title}</h1>
 			</div>
@@ -174,9 +246,23 @@
 	{/each}
 </div>
 
-<!-- Tap to explore + page dots -->
+<!-- Bottom bar + page dots -->
 <div class="mobile-bottom">
-	<p class="tap-hint">tap to explore</p>
+	<div class="mobile-bottom-bar">
+		{#if cardData[activeIndex]?.redirectUrl}
+			<button
+				class="redirect-bottom-btn"
+				onclick={() => openExternal(cardData[activeIndex].redirectUrl!)}
+				aria-label="Open external link"
+			>
+				<ArrowUpRight size={18} />
+			</button>
+		{/if}
+		<p class="tap-hint">tap to explore</p>
+		<button class="menu-btn" onclick={() => menuOpen = true} aria-label="Open menu">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
 	<div class="mobile-dots">
 		{#each cardData as _, i}
 			<button
@@ -192,3 +278,20 @@
 		{/each}
 	</div>
 </div>
+
+<!-- Menu overlay -->
+{#if menuOpen}
+	<div class="menu-overlay" onclick={() => menuOpen = false}>
+		<div class="menu-content" onclick={(e) => e.stopPropagation()}>
+			<div class="menu-header">
+				<h2>All Topics</h2>
+				<button class="menu-close" onclick={() => menuOpen = false}>✕</button>
+			</div>
+			{#each cardData as card, i}
+				<button class="menu-item" onclick={() => goTo(card.slug, i)}>
+					{card.title}
+				</button>
+			{/each}
+		</div>
+	</div>
+{/if}
