@@ -33,6 +33,7 @@
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-cloudflare": "^7.2.9",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.63.0",
 		"@sveltejs/package": "^2.5.8",

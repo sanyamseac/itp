@@ -1,5 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
@@ -12,7 +12,20 @@ export default defineConfig({
 				runes: ({ filename }) =>
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
-			adapter: adapter()
+			adapter: adapter({
+			// See below for an explanation of these options
+				config: undefined,
+				platformProxy: {
+					configPath: undefined,
+					environment: undefined,
+					persist: undefined
+				},
+				fallback: 'plaintext',
+				routes: {
+					include: ['/*'],
+					exclude: ['<all>']
+				}
+			})
 		})
 	]
 });
