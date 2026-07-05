@@ -38,7 +38,10 @@
 
 		<h2>How to Use</h2>
 		<p>
-			Just check the portal to see if your courier has been delivered, then head to
+			You will get an email everytime any of your order is delivered. Remember to add your mobile number on 
+			<a href="https://couriers.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
+				couriers.iiit.ac.in <ArrowUpRight size={14} /></a>.
+			Alternatively, just check the portal to see if your courier has been delivered, then head to
 			Nilgiri and collect it.
 		</p>
 

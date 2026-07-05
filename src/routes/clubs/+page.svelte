@@ -14,14 +14,6 @@
 
 		<div class="section-divider"></div>
 
-		<div class="info-box" style="background: #fef9c3; border-color: #facc15;">
-			<p>
-				<strong>Only works on campus.</strong> Clubs portal is accessible from IIIT WiFi
-				or LAN. Off campus?
-				<a href="/vpn" class="inline-link">Connect via VPN <ArrowUpRight size={14} /></a> first.
-			</p>
-		</div>
-
 		<div class="info-box" style="background: #ecfdf5; border-color: #34d399;">
 			<p>
 				<strong>Note.</strong> clubs.iiit.ac.in will soon be replaced by
