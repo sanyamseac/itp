@@ -38,6 +38,34 @@
 			redirectUrl: null,
 			gradient: 'from-stone-50 via-neutral-50/50 to-zinc-50',
 			viewName: 'card-ethernet'
+		},
+		{
+			slug: 'vpn',
+			title: 'VPN Access',
+			redirectUrl: 'https://vpn.iiit.ac.in',
+			gradient: 'from-rose-50 via-pink-50/50 to-fuchsia-50',
+			viewName: 'card-vpn'
+		},
+		{
+			slug: 'login',
+			title: 'Central Login',
+			redirectUrl: 'https://login.iiit.ac.in',
+			gradient: 'from-yellow-50 via-amber-50/50 to-orange-50',
+			viewName: 'card-login'
+		},
+		{
+			slug: 'outlook',
+			title: 'Outlook and M365',
+			redirectUrl: 'https://webmail.iiit.ac.in',
+			gradient: 'from-indigo-50 via-blue-50/50 to-cyan-50',
+			viewName: 'card-outlook'
+		},
+		{
+			slug: 'mailinglists',
+			title: 'Mailing Lists',
+			redirectUrl: 'https://lists.iiit.ac.in',
+			gradient: 'from-teal-50 via-emerald-50/50 to-green-50',
+			viewName: 'card-mailinglists'
 		}
 	];
 

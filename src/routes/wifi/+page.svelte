@@ -126,12 +126,6 @@
 				</li>
 			</ol>
 		{:else if activeTab === 'macos'}
-			<div class="info-box" style="border-color: #fca5a5; background: #fef2f2;">
-				<p>
-					<strong>Oh, a Mac user?</strong> Apple likes to pretend enterprise WiFi doesn't exist.
-					Fine. Here's how to force your premium-priced laptop to connect like the rest of us.
-				</p>
-			</div>
 			<ol class="step-list">
 				<li class="step-item">
 					<div class="step-title">Open System Settings</div>
