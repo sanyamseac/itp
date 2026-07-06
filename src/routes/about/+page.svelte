@@ -2,6 +2,11 @@
 	import { goto } from '$app/navigation';
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
+	
+<svelte:head>
+	<title>About | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="About the IIIT Hyderabad Intro to Portals Guide — made by Sanyam Gandhi. Open source and community-driven." />
+</svelte:head>
 
 <div class="detail-overlay" style="view-transition-name: card-about">
 	<div class="detail-content">

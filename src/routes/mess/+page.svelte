@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Mess | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IIIT Hyderabad Mess portal — meal booking, dining hall registration, bulk registration, auth keys, and API docs." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-mess">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

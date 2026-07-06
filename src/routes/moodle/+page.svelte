@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Moodle | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Moodle LMS at IIIT Hyderabad — access courses, submit assignments, check announcements, and use the Moodle mobile app." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-moodle">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

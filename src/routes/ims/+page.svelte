@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>IMS Portal | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IMS Portal at IIIT Hyderabad — manage academics, student activities, course registration, attendance, and fee payments." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-ims">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

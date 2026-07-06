@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Mailing Lists | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IIIT Hyderabad student mailing lists — how to join UG1, batch-wide announcements, and manage your subscriptions." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-mailinglists">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

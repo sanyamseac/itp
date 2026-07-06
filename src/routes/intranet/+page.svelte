@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Intranet | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IIIT Hyderabad Intranet — docs repository with timetable, almanac, forms, guidelines, and official resources." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-intranet">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>My IIIT App | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="My IIIT app for IIIT Hyderabad — check attendance, timetable, transcript, apply for leaves, and manage mess bookings." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-app">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

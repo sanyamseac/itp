@@ -4,6 +4,11 @@ import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 	let activeTab = $state<'ubuntu' | 'windows' | 'macos'>('ubuntu');
 </script>
 
+<svelte:head>
+	<title>Ethernet | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Set up ethernet / LAN connection in IIIT Hyderabad hostels. Static IP configuration for Windows, macOS, and Linux." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-ethernet">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

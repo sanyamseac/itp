@@ -5,6 +5,11 @@
 	let activeTab = $state<'windows' | 'linux' | 'macos' | 'ios' | 'android'>('windows');
 </script>
 
+<svelte:head>
+	<title>VPN | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Connect to IIIT Hyderabad VPN for off-campus access. Setup guides for Windows, macOS, Linux, and Android." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-vpn">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">
@@ -107,6 +112,7 @@
 					<div class="step-desc">
 						Install OpenVPN from your package manager:
 						<br /><code>sudo apt install openvpn</code> (Debian/Ubuntu)
+						<br /><code>sudo dnf install openvpn</code> (Fedora)
 						<br /><code>sudo pacman -S openvpn</code> (Arch)
 					</div>
 				</li>

@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Clubs | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IIIT Hyderabad Clubs portal — browse clubs, teams, events, and manage your profile with CAS login." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-clubs">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

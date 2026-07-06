@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Help Desk | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IIIT Hyderabad Help Desk — file tickets for any campus issue from broken doors to account resets." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-help">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

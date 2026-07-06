@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Outlook / Microsoft 365 | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Set up your IIIT Hyderabad Outlook email and Microsoft 365 account. Access your institutional email and Office apps." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-outlook">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

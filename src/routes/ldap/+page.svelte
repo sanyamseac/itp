@@ -3,6 +3,11 @@
 	import { ArrowLeft } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>LDAP | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Learn about LDAP credentials, your digital identity at IIIT Hyderabad." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-ldap">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">
@@ -23,7 +28,7 @@
 		<div class="info-box">
 			<p>
 				<strong>Why LDAP Matters?</strong> Your LDAP credentials are the root of everything at IIIT.
-				From logging into campus computers to accessing WiFi, checking grades on the IMS, submitting
+				From logging into campus computers to checking grades on the IMS, submitting
 				assignments on Moodle, and accessing the digital library, it all starts with LDAP.
 			</p>
 		</div>

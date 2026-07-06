@@ -3,6 +3,11 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Self-Help | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="IIIT Hyderabad Self-Help wiki — community-maintained information about campus life, academics, and tips." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-selfhelp">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

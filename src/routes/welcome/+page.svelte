@@ -3,6 +3,11 @@
 	import { ArrowLeft } from '@lucide/svelte';
 </script>
 
+<svelte:head>
+	<title>Welcome to IIIT | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Welcome to IIIT Hyderabad — your journey begins here. A guide to all campus portals, services, and tools." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-welcome">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">

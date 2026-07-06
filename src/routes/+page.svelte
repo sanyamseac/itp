@@ -138,6 +138,13 @@
 			viewName: 'card-couriers'
 		},
 		{
+			slug: 'services',
+			title: 'Services',
+			redirectUrl: 'https://ims-extr.iiit.ac.in/office_payments.php',
+			gradient: 'from-amber-50 via-yellow-50/50 to-lime-50',
+			viewName: 'card-services'
+		},
+		{
 			slug: 'portals',
 			title: 'Portals',
 			redirectUrl: 'https://portals.iiit.ac.in',
@@ -223,6 +230,11 @@
 		window.open(url, '_blank', 'noopener,noreferrer');
 	}
 </script>
+
+<svelte:head>
+	<title>IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="A complete fresher's guide to IIIT Hyderabad's campus portals, services, and tools." />
+</svelte:head>
 
 <!-- ────────────── HORIZONTAL SCROLL CARDS (all screens) ────────────── -->
 <div

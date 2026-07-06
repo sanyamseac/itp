@@ -5,6 +5,11 @@
 	let activeTab = $state<'ubuntu' | 'windows' | 'macos'>('ubuntu');
 </script>
 
+<svelte:head>
+	<title>WiFi | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="Connect to IIIT Hyderabad campus WiFi — CCampus, CCampus-onboard, eduroam, and device-specific setup guides." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-wifi">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">
@@ -52,14 +57,6 @@
 		{#if activeTab === 'ubuntu'}
 			<ol class="step-list">
 				<li class="step-item">
-					<div class="step-title">Open WiFi Settings</div>
-					<div class="step-desc">
-						Click the network icon in the top-right corner and select
-						<strong>Advanced Options &gt; WiFi Settings</strong> (GNOME) or open your
-						network manager directly.
-					</div>
-				</li>
-				<li class="step-item">
 					<div class="step-title">Select wifi@iiith</div>
 					<div class="step-desc">
 						Find <strong>wifi@iiith</strong> in the list of available networks and click
@@ -78,7 +75,7 @@
 					<div class="step-title">Set CA Certificate</div>
 					<div class="step-desc">
 						Set <strong>CA certificate</strong> to <strong>Trust on First Use (TOFU)</strong>.
-						If that option isn't available, select <strong>Don't validate</strong> or leave it
+						If that option isn't available, select <strong>Don't validate/No CA required</strong> or leave it
 						blank — the network uses a RADIUS server.
 					</div>
 				</li>
@@ -93,13 +90,6 @@
 			</ol>
 		{:else if activeTab === 'windows'}
 			<ol class="step-list">
-				<li class="step-item">
-					<div class="step-title">Open WiFi Settings</div>
-					<div class="step-desc">
-						Click the WiFi icon in the system tray and select
-						<strong>Network &amp; Internet settings</strong>.
-					</div>
-				</li>
 				<li class="step-item">
 					<div class="step-title">Connect to wifi@iiith</div>
 					<div class="step-desc">
@@ -119,21 +109,11 @@
 					<div class="step-title">Done</div>
 					<div class="step-desc">
 						Windows will save the credentials and connect automatically from now on.
-						If you need to update your password later, go to
-						<strong>Manage known networks</strong> &gt; <strong>wifi@iiith</strong> &gt;
-						<strong>Properties</strong>.
 					</div>
 				</li>
 			</ol>
 		{:else if activeTab === 'macos'}
 			<ol class="step-list">
-				<li class="step-item">
-					<div class="step-title">Open System Settings</div>
-					<div class="step-desc">
-						Go to <strong>System Settings</strong> &gt; <strong>WiFi</strong>.
-						Yes, it's buried under six layers of UI. That's Apple for you.
-					</div>
-				</li>
 				<li class="step-item">
 					<div class="step-title">Connect to wifi@iiith</div>
 					<div class="step-desc">
@@ -144,16 +124,14 @@
 				<li class="step-item">
 					<div class="step-title">Trust the Certificate</div>
 					<div class="step-desc">
-						macOS will show a scary dialog saying the certificate can't be verified.
-						Click <strong>Trust</strong> or <strong>Continue</strong>. The RADIUS server is
-						safe — Apple just doesn't like things it didn't manufacture.
+						macOS might show a dialog saying the certificate can't be verified.
+						Click <strong>Trust</strong> or <strong>Continue</strong>.
 					</div>
 				</li>
 				<li class="step-item">
 					<div class="step-title">You're Online. Don't Drop It.</div>
 					<div class="step-desc">
-						You're connected. If macOS asks to "verify" the network again later, just
-						click Trust again. It'll learn eventually. (Or maybe not. It's a Mac.)
+						You're connected. macOS will remember the credentials and connect automatically next time.
 					</div>
 				</li>
 			</ol>
@@ -163,8 +141,9 @@
 
 		<div class="info-box" style="border-color: #fde68a; background: #fffbeb;">
 			<p>
-				<strong>Tip:</strong> If you forget your 802.1x password, visit
-				<code>passwordreset.iiit.ac.in</code> and reset it from the 802.1x tab.
+				Windows and most Linux distributions allows you to share your ethernet connection over hotspot. 
+				Please note that all the activities on the hotspot will be logged with your account. 
+				MacOS just doesn't allow sharing of 802.1x connections over hotspot.
 			</p>
 		</div>
 	</div>

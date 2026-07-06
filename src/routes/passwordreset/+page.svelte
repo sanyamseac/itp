@@ -7,6 +7,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Password Reset | IIIT Hyderabad Intro to Portals Guide</title>
+	<meta name="description" content="How to reset your LDAP password at IIIT Hyderabad through the password reset portal." />
+</svelte:head>
+
 <div class="detail-overlay" style="view-transition-name: card-passwordreset">
 	<div class="detail-content">
 		<button class="back-link" onclick={() => goto('/')} aria-label="Go back">
