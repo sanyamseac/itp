@@ -43,8 +43,45 @@
 
 		<div class="section-divider"></div>
 
-		<h2>Contributors</h2>
-		<p>None as of now.</p>
+		<h2>Collaborators</h2>
+		<ul class="step-list">
+			<li class="step-item">
+				<div class="step-title">Abhyudit "Norman" Singh</div>
+				<div class="step-desc">
+					<a href="mailto:abhyudit.singh@research.iiit.ac.in" class="inline-link">
+						abhyudit.singh@research.iiit.ac.in <ArrowUpRight size={14} />
+					</a>
+					·
+					<a href="https://github.com/bitmap4" target="_blank" rel="noopener noreferrer" class="inline-link">
+						@bitmap4 <ArrowUpRight size={14} />
+					</a>
+				</div>
+			</li>
+			<li class="step-item">
+				<div class="step-title">Ishaan Romil</div>
+				<div class="step-desc">
+					<a href="mailto:ishaan.romil@research.iiit.ac.in" class="inline-link">
+						ishaan.romil@research.iiit.ac.in <ArrowUpRight size={14} />
+					</a>
+					·
+					<a href="https://github.com/Fane1824" target="_blank" rel="noopener noreferrer" class="inline-link">
+						@Fane1824 <ArrowUpRight size={14} />
+					</a>
+				</div>
+			</li>
+			<li class="step-item">
+				<div class="step-title">Manasi Mundada</div>
+				<div class="step-desc">
+					<a href="mailto:manasi.mundada@students.iiit.ac.in" class="inline-link">
+						manasi.mundada@students.iiit.ac.in <ArrowUpRight size={14} />
+					</a>
+					·
+					<a href="https://github.com/manasimundada" target="_blank" rel="noopener noreferrer" class="inline-link">
+						@manasimundada <ArrowUpRight size={14} />
+					</a>
+				</div>
+			</li>
+		</ul>
 
 		<div class="section-divider"></div>
 
