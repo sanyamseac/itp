@@ -26,6 +26,13 @@
 			viewName: 'card-passwordreset'
 		},
 		{
+			slug: 'matrix',
+			title: 'Matrix Chat',
+			redirectUrl: 'https://app.element.io',
+			gradient: 'from-green-50 via-emerald-50/50 to-teal-50',
+			viewName: 'card-matrix'
+		},
+		{
 			slug: 'wifi',
 			title: 'Connect to WiFi',
 			redirectUrl: null,
