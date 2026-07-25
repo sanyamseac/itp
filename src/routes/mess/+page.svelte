@@ -31,8 +31,8 @@
 
 		<h2>Overview</h2>
 		<p>
-			<a href="https://mess.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
-				mess.iiit.ac.in <ArrowUpRight size={14} /></a>
+			<a href="https://dining.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
+				dining.iiit.ac.in <ArrowUpRight size={14} /></a>
 			is the meal booking portal. Once you log in via CAS, you can register for a dining
 			hall and start booking meals.
 		</p>
@@ -83,13 +83,13 @@
 		<h2>API Docs</h2>
 		<p>
 			Feeling adventurous? Check out
-			<a href="https://mess.iiit.ac.in/api/docs" target="_blank" rel="noopener noreferrer" class="inline-link">
-				mess.iiit.ac.in/api/docs <ArrowUpRight size={14} /></a>
+			<a href="https://dining.iiit.ac.in/api/docs" target="_blank" rel="noopener noreferrer" class="inline-link">
+				dining.iiit.ac.in/api/docs <ArrowUpRight size={14} /></a>
 			and build your own app to do whatever you want.
 		</p>
 
 		<div style="margin-top: 2rem;">
-			<button class="cta-btn" onclick={() => window.open('https://mess.iiit.ac.in', '_blank', 'noopener,noreferrer')}>
+			<button class="cta-btn" onclick={() => window.open('https://dining.iiit.ac.in', '_blank', 'noopener,noreferrer')}>
 				Open Mess Portal
 				<ArrowUpRight size={16} />
 			</button>
