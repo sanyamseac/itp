@@ -98,7 +98,7 @@
 		{
 			slug: 'mess',
 			title: 'Mess',
-			redirectUrl: 'https://mess.iiit.ac.in',
+			redirectUrl: 'https://dining.iiit.ac.in',
 			gradient: 'from-orange-50 via-amber-50/50 to-yellow-50',
 			viewName: 'card-mess'
 		},
