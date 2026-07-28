@@ -152,6 +152,13 @@
 			viewName: 'card-services'
 		},
 		{
+			slug: 'almanac',
+			title: 'Almanac',
+			redirectUrl: 'https://almanac.iiit.ac.in',
+			gradient: 'from-sky-50 via-cyan-50/50 to-blue-50',
+			viewName: 'card-almanac'
+		},
+		{
 			slug: 'portals',
 			title: 'Portals',
 			redirectUrl: 'https://portals.iiit.ac.in',
@@ -240,18 +247,18 @@
 
 <svelte:head>
 	<title>IIIT Hyderabad Intro to Portals Guide</title>
-	<meta name="description" content="A complete fresher's guide to IIIT Hyderabad's campus portals, services, and tools." />
+	<meta
+		name="description"
+		content="A complete fresher's guide to IIIT Hyderabad's campus portals, services, and tools."
+	/>
 </svelte:head>
 
 <!-- ────────────── HORIZONTAL SCROLL CARDS (all screens) ────────────── -->
-<div
-	bind:this={scrollContainer}
-	class="mobile-scroll"
->
+<div bind:this={scrollContainer} class="mobile-scroll">
 	{#each cardData as card, i (card.slug)}
 		<section
 			class="mobile-card bg-gradient-to-br {card.gradient}"
-			data-index="{i}"
+			data-index={i}
 			style="view-transition-name: {card.viewName}"
 			onclick={() => goTo(card.slug, i)}
 			onkeydown={(e) => e.key === 'Enter' && goTo(card.slug, i)}
@@ -278,7 +285,7 @@
 			</button>
 		{/if}
 		<p class="tap-hint">tap to explore</p>
-		<button class="menu-btn" onclick={() => menuOpen = true} aria-label="Open menu">
+		<button class="menu-btn" onclick={() => (menuOpen = true)} aria-label="Open menu">
 			<span></span><span></span><span></span>
 		</button>
 	</div>
@@ -300,11 +307,11 @@
 
 <!-- Menu overlay -->
 {#if menuOpen}
-	<div class="menu-overlay" onclick={() => menuOpen = false}>
+	<div class="menu-overlay" onclick={() => (menuOpen = false)}>
 		<div class="menu-content" onclick={(e) => e.stopPropagation()}>
 			<div class="menu-header">
 				<h2>All Topics</h2>
-				<button class="menu-close" onclick={() => menuOpen = false}>✕</button>
+				<button class="menu-close" onclick={() => (menuOpen = false)}>✕</button>
 			</div>
 			{#each cardData as card, i}
 				<button class="menu-item" onclick={() => goTo(card.slug, i)}>
