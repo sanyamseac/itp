@@ -44,11 +44,6 @@
 			</a>. Every course you're enrolled in will have a page here with all the materials,
 			assignments, and announcements.
 		</p>
-		<p>
-			Sign in with <strong>CAS</strong> to quickly see the right course set for your batch/year, which
-			makes initial course discovery much easier.
-		</p>
-
 		<div class="section-divider"></div>
 
 		<h2>Announcements</h2>
