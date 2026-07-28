@@ -3,13 +3,13 @@
 	import { ArrowLeft, ArrowUpRight } from '@lucide/svelte';
 
 	function openElement() {
-		window.open('https://app.element.io', '_blank', 'noopener,noreferrer');
+		window.open('https://matrix.iiit.ac.in', '_blank', 'noopener,noreferrer');
 	}
 </script>
 
 <svelte:head>
 	<title>Matrix | IIIT Hyderabad Intro to Portals Guide</title>
-	<meta name="description" content="IIIT Hyderabad's self-hosted Matrix chat server — sign in with LDAP, join community spaces, course rooms, and interest groups." />
+	<meta name="description" content="IIIT Hyderabad's self-hosted Matrix chat server — sign in with IIIT CAS, join community spaces, course rooms, and interest groups." />
 </svelte:head>
 
 <div class="detail-overlay" style="view-transition-name: card-matrix">
@@ -25,17 +25,16 @@
 
 		<p>
 			IIIT runs its own <a href="https://matrix.org" target="_blank" rel="noopener noreferrer" class="inline-link">Matrix <ArrowUpRight size={14} /></a>
-			server — a decentralized, open-source chat platform. You can use any Matrix client
-			and sign in with your LDAP credentials to join campus-wide spaces, course rooms,
-			and interest groups.
+			server — a decentralized, open-source chat platform, now fully live on the public
+			internet. You can use any Matrix client and sign in with your <strong>IIIT CAS</strong>
+			login to join campus-wide spaces, course rooms, and interest groups.
 		</p>
 
 		<div class="info-box">
 			<p>
 				<strong>Homeserver:</strong> <code>matrix.iiit.ac.in</code><br />
-				<strong>Username:</strong> the part of your college email before the <code>@</code><br />
-				<strong>Password:</strong> your LDAP/CAS password<br />
-				<strong>Login method:</strong> Username/Password (OAuth is not supported yet)
+				<strong>Web client:</strong> <a href="https://matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">matrix.iiit.ac.in <ArrowUpRight size={14} /></a> (IIIT-hosted, no setup needed)<br />
+				<strong>Login method:</strong> IIIT CAS — the same login you use for other campus portals
 			</p>
 		</div>
 
@@ -47,18 +46,19 @@
 			<li class="step-item">
 				<div class="step-title">Pick a Client</div>
 				<div class="step-desc">
-					For the most stable experience, use
-					<a href="https://app.element.io" target="_blank" rel="noopener noreferrer" class="inline-link">
-						<code>app.element.io</code>
+					The easiest way in is the IIIT-hosted web client at
+					<a href="https://matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
+						<code>matrix.iiit.ac.in</code>
 						<ArrowUpRight size={14} />
 					</a>
-					in your browser, grab
+					— it's a hosted build of Element that already points at our server, so there's no
+					provider to select. On mobile, install the <strong>Element X</strong> app; on desktop,
+					grab
 					<a href="https://element.io/download" target="_blank" rel="noopener noreferrer" class="inline-link">
 						Element Desktop
 						<ArrowUpRight size={14} />
 					</a>
-					for Windows, macOS, or Linux, or download the <strong>Element X</strong> app on your
-					phone. You can also browse
+					for Windows, macOS, or Linux. You can also browse
 					<a href="https://matrix.org/ecosystem/clients" target="_blank" rel="noopener noreferrer" class="inline-link">
 						matrix.org/ecosystem/clients
 						<ArrowUpRight size={14} />
@@ -67,26 +67,26 @@
 				</div>
 			</li>
 			<li class="step-item">
-				<div class="step-title">Change the Homeserver</div>
+				<div class="step-title">Set the Homeserver</div>
 				<div class="step-desc">
-					On the sign-in screen, change the homeserver from the default
-					<code>matrix.org</code> to <code>matrix.iiit.ac.in</code>. Don't skip this — otherwise
-					you'll be creating an account on the public server instead.
+					If you're using an app rather than the IIIT web client, change the homeserver (a.k.a.
+					provider) from the default <code>matrix.org</code> to <code>matrix.iiit.ac.in</code> on
+					the sign-in screen. The web client at <code>matrix.iiit.ac.in</code> already has this set.
 				</div>
 			</li>
 			<li class="step-item">
-				<div class="step-title">Allow Internal Network Access</div>
+				<div class="step-title">Sign In with CAS</div>
 				<div class="step-desc">
-					On browser clients, the website might ask for permission to access the internal
-					network. Allow it, or the client won't be able to reach the IIIT homeserver. The
-					server is reachable from the public internet, so you can use it off campus too.
+					Log in with <strong>IIIT CAS</strong> — the same single sign-on you use for other campus
+					portals. (Username/password login is being phased out, so use CAS.)
 				</div>
 			</li>
 			<li class="step-item">
-				<div class="step-title">Sign In</div>
+				<div class="step-title">Add More Devices with QR</div>
 				<div class="step-desc">
-					Choose <strong>Username/Password</strong> login (not OAuth/SSO) and enter your LDAP
-					username (the part before <code>@</code> in your email) and your LDAP/CAS password.
+					Already signed in somewhere? You can log in on a new device by scanning a
+					<strong>QR code</strong> from an existing session — no need to re-enter credentials or
+					re-verify from scratch.
 				</div>
 			</li>
 		</ol>
@@ -112,7 +112,7 @@
 		<div class="domain-grid">
 			<div class="domain-card">
 				<h3>
-					<a href="https://matrix.to/#/#community:matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
+					<a href="https://matrix.iiit.ac.in/share/#/#community:matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
 						Community Space <ArrowUpRight size={14} />
 					</a>
 				</h3>
@@ -126,7 +126,7 @@
 			</div>
 			<div class="domain-card">
 				<h3>
-					<a href="https://matrix.to/#/#m26-courses:matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
+					<a href="https://matrix.iiit.ac.in/share/#/#m26-courses:matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
 						M'26 Course Rooms <ArrowUpRight size={14} />
 					</a>
 				</h3>
@@ -138,7 +138,7 @@
 			</div>
 			<div class="domain-card">
 				<h3>
-					<a href="https://matrix.to/#/#interests:matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
+					<a href="https://matrix.iiit.ac.in/share/#/#interests:matrix.iiit.ac.in" target="_blank" rel="noopener noreferrer" class="inline-link">
 						Interests Space <ArrowUpRight size={14} />
 					</a>
 				</h3>
@@ -162,10 +162,20 @@
 
 		<div class="info-box" style="border-color: #fde68a; background: #fffbeb;">
 			<p>
-				<strong>Important:</strong> For encrypted chats (outside groups), there is <strong>no way</strong>
-				to retrieve your messages if you lose your backup key. Take utmost care of it.
+				<strong>Back up your encryption key.</strong> Your encrypted messages can only be read on a
+				device that holds the key. Save your recovery/backup key somewhere safe — you'll need it to
+				read your history when you switch or add a device, and there is <strong>no way</strong> to
+				recover encrypted chats without it.
 			</p>
 		</div>
+
+		<div class="section-divider"></div>
+
+		<h2>Calling</h2>
+		<p>
+			Voice and video calls are <strong>disabled over the public internet for now</strong>. The
+			team plans to enable them soon.
+		</p>
 
 		<div class="section-divider"></div>
 
@@ -174,25 +184,25 @@
 
 		<ol class="step-list">
 			<li class="step-item">
-				<div class="step-title">Media Is Deleted After 7 Days</div>
+				<div class="step-title">Messages Are Kept at Least 1 Year</div>
 				<div class="step-desc">
-					Any uploaded media is deleted after 7 days — download and save important files to
-					your device. This window may be extended to 30 days in the future based on usage,
-					but that's not a guarantee.
+					Text messages stay on the server for at least a year, unless there's a necessary
+					reason to remove them earlier.
 				</div>
 			</li>
 			<li class="step-item">
-				<div class="step-title">Text Messages Are Kept</div>
+				<div class="step-title">Media Is Kept at Least 1 Month</div>
 				<div class="step-desc">
-					Text messages won't be deleted for at least 1 year, unless there's some important
-					reason to do so.
+					Uploaded media is kept for at least a month before it may be deleted — download and
+					save important files to your device so you don't lose them.
 				</div>
 			</li>
 			<li class="step-item">
-				<div class="step-title">Keep Your Own Backups</div>
+				<div class="step-title">Backups &amp; Reporting Issues</div>
 				<div class="step-desc">
-					Server-side backups are still being set up. Most clients cache messages on your
-					device, but keep your own backup of sensitive messages just in case.
+					There are a few message backups on the server, and cloud backups are in the works.
+					There's <strong>no media backup planned</strong> for now. If you notice a message
+					issue, report it within <strong>2 hours</strong> so the team can recover it easily.
 				</div>
 			</li>
 		</ol>
@@ -207,11 +217,11 @@
 
 		<div style="margin-top: 2rem; display: flex; flex-direction: column; align-items: flex-start;">
 			<button class="cta-btn" onclick={openElement}>
-				Open Element Web
+				Open IIIT Matrix
 				<ArrowUpRight size={16} />
 			</button>
 			<p style="margin-top: 0.5rem; font-size: 0.8rem; color: #9ca3af;">
-				Opens app.element.io in a new tab
+				Opens matrix.iiit.ac.in in a new tab
 			</p>
 		</div>
 	</div>
