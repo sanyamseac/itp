@@ -152,6 +152,13 @@
 			viewName: 'card-services'
 		},
 		{
+			slug: 'almanac',
+			title: 'Almanac',
+			redirectUrl: 'https://almanac.iiit.ac.in',
+			gradient: 'from-sky-50 via-cyan-50/50 to-blue-50',
+			viewName: 'card-almanac'
+		},
+		{
 			slug: 'portals',
 			title: 'Portals',
 			redirectUrl: 'https://portals.iiit.ac.in',
