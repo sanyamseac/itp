@@ -43,8 +43,8 @@
 			is the institute's academic calendar with important semester dates, deadlines, holidays, and breaks.
 		</p>
 		<p>
-			When you sign in with <strong>CAS</strong>, the almanac can automatically show the right course
-			selection timeline for your batch/year.
+			When you sign in with <strong>CAS</strong>, the almanac can automatically show the right
+			course selection timeline for your batch/year.
 		</p>
 
 		<div style="margin-top: 2rem;">
