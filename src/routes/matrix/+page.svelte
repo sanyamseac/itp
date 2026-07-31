@@ -216,7 +216,7 @@
 							<ArrowUpRight size={14} />
 						</a>
 						— or grab the copy hosted here:
-						<a href="/extera.apk" class="inline-link">extera.apk<ArrowUpRight size={14} /></a>. If
+						<a href="https://1drv.ms/u/c/f0138249cab9fc5c/IQD9SDP40656QLwt6GetTqhXAVp_OVtUCFKc7aJfSGFreKs?e=ek8pcP" class="inline-link">extera.apk<ArrowUpRight size={14} /></a>. If
 						your browser asks to <strong>allow installs from this source</strong>, tap
 						<strong>Allow</strong>. If <strong>Play Protect</strong> warns about the install, tap
 						<strong>More details → Install anyway</strong>.
@@ -365,8 +365,8 @@
 					height="160"
 				/>
 				<p>
-					Updates, discussion, and reviews on dining halls (messes) — food reviews, meal
-					updates, and everything in between.
+					Updates, discussion, and reviews on dining halls (messes) — food reviews, meal updates,
+					and everything in between.
 				</p>
 			</div>
 		</div>
