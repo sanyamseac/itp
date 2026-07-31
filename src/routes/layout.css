@@ -21,7 +21,11 @@ html {
 
 body {
 	@apply bg-white text-gray-900 antialiased;
-	font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+	font-family:
+		'Quicksand',
+		system-ui,
+		-apple-system,
+		sans-serif;
 	overflow-x: hidden;
 }
 
@@ -255,12 +259,20 @@ body {
 
 /* ── Animations ── */
 @keyframes fade-in {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 @keyframes fade-out {
-	from { opacity: 1; }
-	to { opacity: 0; }
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
 
 /* ── Detail Page Overlay ── */
@@ -392,6 +404,16 @@ body {
 	line-height: 1.5;
 }
 
+.qr-code {
+	width: 160px;
+	height: 160px;
+	border-radius: 8px;
+	border: 1px solid #e5e7eb;
+	background: #fff;
+	padding: 0.25rem;
+	margin: 0.75rem 0;
+}
+
 /* ── Username Visual ── */
 .username-visual {
 	display: flex;
@@ -428,8 +450,6 @@ body {
 	width: 100%;
 }
 
-
-
 /* ── Step List ── */
 .step-list {
 	counter-reset: step;
@@ -449,7 +469,7 @@ body {
 }
 
 .step-item::before {
-	content: counter(step) ".";
+	content: counter(step) '.';
 	position: absolute;
 	left: 1rem;
 	top: 1rem;
@@ -513,7 +533,9 @@ body {
 	color: #9ca3af;
 	border-bottom: 2px solid transparent;
 	margin-bottom: -1px;
-	transition: color 0.15s, border-color 0.15s;
+	transition:
+		color 0.15s,
+		border-color 0.15s;
 	font-family: inherit;
 }
 
@@ -600,8 +622,6 @@ pre code {
 	overflow: hidden;
 	cursor: pointer;
 }
-
-
 
 /* ── Page dots ── */
 .mobile-dots {
