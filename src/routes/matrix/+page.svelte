@@ -207,7 +207,7 @@
 					<div class="step-desc">
 						Download the <strong>Extera</strong> APK from
 						<a
-							href="https://extera.xyz"
+							href="https://get.extera.xyz/v26.4.5/app-release.apk"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="inline-link"
@@ -216,7 +216,14 @@
 							<ArrowUpRight size={14} />
 						</a>
 						— or grab the copy hosted here:
-						<a href="https://1drv.ms/u/c/f0138249cab9fc5c/IQD9SDP40656QLwt6GetTqhXAVp_OVtUCFKc7aJfSGFreKs?e=ek8pcP" class="inline-link">extera.apk<ArrowUpRight size={14} /></a>. If
+						<a 
+							href="https://1drv.ms/u/c/f0138249cab9fc5c/IQAb_WHPg88nSIoKPSZ0k9q5AVE4UYMHHPi2EHHmmn98x8c?e=vtqSyt" 							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-link"
+						>
+							extera.apk
+							<ArrowUpRight size={14} />
+						</a>. If
 						your browser asks to <strong>allow installs from this source</strong>, tap
 						<strong>Allow</strong>. If <strong>Play Protect</strong> warns about the install, tap
 						<strong>More details → Install anyway</strong>.
